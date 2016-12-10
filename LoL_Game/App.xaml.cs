@@ -61,7 +61,6 @@ namespace LoL_Game
                     //TODO: Load state from previously suspended application
                 }
 
-                // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
             }
 

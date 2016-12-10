@@ -7,7 +7,12 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-338,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="156*"/>
+            <ColumnDefinition Width="229*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox x:Name="languageBox" ItemsSource="{Binding LanguagesList, Mode=OneWay}" DisplayMemberPath="Name" SelectedValuePath="Id" SelectedValue="{Binding SelectedLanguageId, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="2" Height="36" Margin="10,10,9.667,0" HorizontalAlignment="Stretch" />
     </Grid>
 </Page>
